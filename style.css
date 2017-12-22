@@ -1,25 +1,91 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: Avenir, Ariel, sans-serif;
+	text-decoration: none;
+	list-style: none;
 }
 
 .container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-gap: 10px;
-	grid-auto-rows: minmax(125px, auto);
+	grid-auto-rows: minmax(100px, auto);
 }
 
 .grid {
-	padding: 25px;
 	font-size: 3rem;
 	box-sizing: border-box;
 }
 
 .header {
-	background-color: aquamarine;
+	height: 160px;
 	grid-column: 1 / 13;
 	grid-row: 1 / 2;
+	display: flex;
+}
+
+.logo {
+	background-image: url(Generic_Layouts.png);
+	background-repeat: no-repeat;
+	height: 151px;
+	width: 180px;
+	margin-top: 4px;
+	margin-left: 35px;
+	background-position: 99% 50%;
+}
+
+.nav {
+	font-size: 1.2rem;
+	margin: 0 auto;
+}
+
+.nav ul {
+	position: relative;
+	float: left;
+}
+
+.nav ul a {
+	display: block;
+	color: #fe8402;
+	line-height: 32px;
+}
+
+.nav ul li {
+	position: relative;
+	float: left;
+	padding: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 75.5px;
+}
+
+.nav ul ul {
+	display: none;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(127, 255, 212, .9);
+	border: 2px solid #fe8402;
+	border-radius: 10px;
+	top: 100%;
+}
+
+.nav ul ul li {
+	float: none;
+	width: 100px;
+	padding: 0;
+	margin: 0;
+}
+
+.nav ul ul a {
+	line-height: 120%;
+	padding: 15px 5px;
+	margin: 0;
+}
+
+.nav ul li:hover > ul {
+	display: block;
 }
 
 .sidebar {
